@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: command-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ledger
+    username: ledger
+    password: ledger
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false
+  kafka:
+    bootstrap-servers: localhost:29092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+server:
+  port: 8081
+
+redisson:
+  address: "redis://localhost:6379"
