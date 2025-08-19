@@ -1,7 +1,6 @@
 
 # LedgerForge — Event-Sourced Payments Ledger (CQRS, Outbox, Kafka, Redis Locks)
 
-A production-style Java backend that recruiters love to see:
 - **Java 21 + Spring Boot 3**, Gradle multi-module
 - **CQRS**: `command-service` (write) and `query-service` (read)
 - **Event sourcing** with **Kafka** and an **Outbox pattern** (exactly-once at-least-once hybrid)
